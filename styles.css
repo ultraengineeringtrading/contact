@@ -1,0 +1,74 @@
+body {
+    background: url('assets/images/ultraengineering_logo.jpeg') no-repeat center center fixed; 
+    background-size: auto 100%;  /* Stretch the background image to cover the full container */
+    font-family: Arial, sans-serif;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.9);  /* Black background with 50% opacity */
+    z-index: -1;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    position: relative;
+}
+
+.logo::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background: url('assets/images/ultraengineering_logo.jpeg');
+    background-size: cover;
+    border-radius: 50%;
+    z-index: 1;
+    mask-image: radial-gradient(circle at center, transparent 70%, black 70%);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.heading {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.link-section {
+    margin: 20px 0;
+}
+
+.links {
+    display: block;
+    margin: 10px 0;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-section {
+    background-color: #eee;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.list-group-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;  /* Add space between each item */
+
+}
